@@ -13,14 +13,10 @@ class BiodataController extends Controller
      */
     public function index()
     {
-        $biodatas = [
-            ['first_name' => 'Tia', 'last_name' => 'Mustika'],
-            ['first_name' => 'Jawir', 'last_name' => 'Ramadhani'],
-            ['first_name' => 'pungkas', 'last_name' => 'topik'],
-        ];    
-
+        $biodatas = Biodata::all(); // Ambil data dari database
         return view('biodatas.index', compact('biodatas'));
     }
+    
 
     /**
      * Show the form for creating a new resource.
